@@ -1,10 +1,18 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 function Write() {
+  const [date, setDate] = useState('');
+  useEffect(() => {
+    let date = new Date().toDateString();
+    date = date.slice(3);
+    setDate(date);
+  }, [date]);
+
   return (
     <div className="w-3/4 h-[850px]  flex flex-col justify-start p-4 bg-white rounded-2xl mx-10 py-10">
-      <div className="text-gray-400">
-        <h2 className="text-4xl font-bold mx-10 drop-shadow-lg">Date</h2>
+      <div className="text-gray-400 flex ">
+        <span className="text-3xl font-bold drop-shadow-lg px-10">{date}</span>
       </div>
       <form className="flex">
         <textarea

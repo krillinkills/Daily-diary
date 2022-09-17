@@ -4,10 +4,7 @@ import Space from './assets/space.jpg';
 
 function App() {
   return (
-    <div
-      style={{ backgroundImage: `url(${Space})` }}
-      className="w-full h-screen"
-    >
+    <div className="w-full bg-black h-screen bg-no-repeat bg-fixed">
       <Nav />
       <Write />
     </div>
